@@ -1,11 +1,12 @@
+def rem(l,word):
+    n=[]
+    for item in l:
+        if not (item ==word):
+            n.append(item.strip(word))
+    
+    return n
 
-'''
-  *
- ***
-*****'''
-n=int(input("Enter number:  "))
 
-for i in range(1,n+1):
-    print(" "*(n-i),end="")
-    print("*"*(2*i-1),end="")
-    print("")
+l=["Harry","Soham","kiran","an"]
+print(rem(l,"an"))
+    

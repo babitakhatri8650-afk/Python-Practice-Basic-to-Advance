@@ -1,8 +1,10 @@
-n=int(input("Enter number:"))
-i=1
-sum=0
-while i<=n:
-    sum +=i
-    i+=1
-print(sum)
+def pattern(n):
+    if n==0:
+        return 
+    print("*"*n)
+    pattern(n-1)
+
+pattern(3)
+
+    
     

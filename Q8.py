@@ -1,10 +1,7 @@
-'''
-*
-**
-***
-n=3
-'''
-n=int(input("Enter number:"))
+def multiplication_table(n):
+    for i in range(1,11):
+        print(f"{n}X{i}={n*i}")
 
-for i in range(1,n+1):
-    print("*"*(i))
+multiplication_table(5)
+    
+    
