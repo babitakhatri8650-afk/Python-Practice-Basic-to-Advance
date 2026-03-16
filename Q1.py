@@ -1,11 +1,9 @@
-def greatest(a,b,c):
-    if (a>b and a>c):
-        return a
-    elif (b>a and b>c):
-        return b
-    else:
-        return c
-a=1
-b=2
-c=3
-print(greatest(a,b,c))
+f=open("poem.txt")
+content=f.read()
+
+if "twinkle" in content:
+    print("Yes the word twinkle is present in the content")
+else:
+     print("Yes the word twinkle is not present in the content")
+
+f.close()
