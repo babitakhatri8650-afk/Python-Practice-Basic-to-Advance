@@ -1,4 +1,11 @@
-print("a")
-print("b")
-print("c",end="")
-print("d",end="")
+
+def generatetable(n):
+    table=""
+    for i in range(1,11):
+        table+="n*i"
+
+    with open (f"tables/table_{n}.txt","w") as f:
+        f.write(table)
+
+for i in range(2,21):
+    generatetable(i)
