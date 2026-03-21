@@ -1,15 +1,21 @@
-'''
-Recurrsion function
-for example
-sum(1)=1
-sum(2)=1+2
-sum(3)=1+2+3
-sum(4)=1+2+3+4
-sum(n)=sum(n-1)+n'''
+class calculator:
+    def __init__(self,n):
+        self.n=n
 
+    def sqaure(self):
+        print(f"The sqaure of the number is {self.n*self.n}")
+    def cube(self):
+        print(f"The cube of the number is {self.n*self.n*self.n}")
+    def sqaureroot(self):
+        print(f"The sqaureroot of the number is {self.n**1/2}")
+    @staticmethod
+    def hello():
+        print("Hello there")
 
-def sum(n):
-    if n==1:
-        return 1
-    return sum(n-1)+n
-print(sum(4))    
+a=calculator(4)
+a.hello()
+a.sqaure()
+a.sqaureroot()
+a.cube()
+       
+        
