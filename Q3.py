@@ -1,7 +1,10 @@
-class demo:
-    a=4
-object=demo()
-print(object.a) #prints the class attribute because instance attribute is not present
-object.a=0 #instance attribute is set
-print(object.a)# prints the instance attribute because instance attribute is present
-print(demo.a)   #class attribute not change
+def generatetable(n):
+    table=""
+    for i in range(1,11):
+        table+=f"{n}X{i}={n*i}\n"
+
+    with open (f"tables/table_{n}.txt","w") as f:
+        f.write(table)
+
+for i in range(2,21):
+    generatetable(i)
