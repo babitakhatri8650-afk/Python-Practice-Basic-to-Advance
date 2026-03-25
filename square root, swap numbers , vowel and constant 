@@ -1,0 +1,12 @@
+# Q1 – Square root
+import math
+n = float(input("Number? "))
+print(math.sqrt(n))
+# Q2 – Swap
+a = input("A: ")
+b = input("B: ")
+a, b = b, a
+print(a, b)
+# Q3 – Vowel/Consonant
+c = input("Letter? ").lower()
+print("Vowel" if c in "aeiou" else "Consonant")
