@@ -1,10 +1,16 @@
-def generatetable(n):
-    table=""
-    for i in range(1,11):
-        table+=f"{n}X{i}={n*i}\n"
+class employee:
+    salary=234
+    increment=20
+    @property
+    def Salaryafterincrement(self):
+        return self.salary + self.salary*(self.increment/100)
+    @Salaryafterincrement.setter
+    def Salaryafterincrement(self,salary):
+        
+        self.increment=((salary/self.salary)-1)/100
 
-    with open (f"tables/table_{n}.txt","w") as f:
-        f.write(table)
 
-for i in range(2,21):
-    generatetable(i)
+e=employee()
+print(e.Salaryafterincrement)
+print(e.Salaryafterincrement)
+print(e.increment)
