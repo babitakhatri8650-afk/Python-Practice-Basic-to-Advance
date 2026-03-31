@@ -1,12 +1,10 @@
-n=int(input("Enter number:"))
+with open ("file1.txt" )as f:
+    content1=f.read()
 
-for i in range(1,n+1):
-    if (i==1 or i==n):
-        print("*"*(n),end="")
+with open ("file2.txt") as f:
+    content2=f.read()
 
-    else:
-        print("*",end="")
-        print("  "*(n-2),end="")
-        print("*",end="")
-    print("")
-    
+if (content1==content2):
+    print("Yes both content are same")
+else:
+    print("No both content are not same")

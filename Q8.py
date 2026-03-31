@@ -1,7 +1,5 @@
-def multiplication_table(n):
-    for i in range(1,11):
-        print(f"{n}X{i}={n*i}")
-
-multiplication_table(5)
-    
+with open ("this.txt") as f:
+    content=f.read()
+with open("this_copy.txt","w") as f:
+    f.write(content)
     
