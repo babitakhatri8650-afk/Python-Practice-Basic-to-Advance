@@ -1,11 +1,21 @@
-with open ("log.txt") as f:
-    lines=f.readlines()
+class vector:
+    def __inti__(self,l):
+        self.l=l
 
-lineno=1
-for line in lines:
-    if ("python" in line):
-        print(f"Yes python in present in the line no:{lineno}")
-        break
-    lineno+=1
-else:
-    print("Python is not present")
+    def __add__(self,other):
+        result=vector(self.x+other.x,self.y+other.y,self.z+other.z)
+        return result
+    
+    def __mul__(self,other):
+        result=vector(self.x*other.x,self.y*other.y,self.z*other.z)
+        return result
+
+
+    def __str__(self):
+        return f"vector({self.x}x,{self.y}y,{self.z}z)"
+
+    
+    def __len__(self):
+        return 3
+v1=vector([2,4,5])
+print(len(V1))

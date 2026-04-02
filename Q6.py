@@ -1,7 +1,26 @@
-with open ("log.txt") as f:
-    content=f.read()
-if "python" in content :
-    print("Yes python is present in content")
-else:
-    print("Python is not present in content")
+class vector:
+    def __inti__(self,x,y,z):
+        self.x=x
+        self.y=y
+        self.z=z
 
+    def __add__(self,other):
+        result=(self.x+other.x,self.y+other.y,self.z+other.z)
+        return result
+    
+    def __mul__(self,other):
+        result=(self.x*other.x,self.y*other.y,self.z*other.z)
+        return result
+
+
+    def __str__(self):
+        return f"({self.x}i,{self.y}j,{self.z}k)"
+v1=(2,4,5)
+v2=(3,5,6)
+v3=(4,6,7)
+
+print(v1+v2)
+print(v1*v2)
+        
+  
+        
