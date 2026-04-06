@@ -1,4 +1,9 @@
-n=int(input("Enter number:"))
-table=[n*i for i in range(1,11)]
-with open ("table.txt","a") as f:
-    f.write(f"{str(table)}+\n")
+from functools import reduce
+l=[4,35,48735,234,22,77,8875]
+
+def greater(a,b):
+    if a>b:
+        return a
+    return b
+
+print(reduce(greater,l))
