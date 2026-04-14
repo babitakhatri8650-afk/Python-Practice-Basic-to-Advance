@@ -1,0 +1,29 @@
+# Function to find GCD using the Euclidean algorithm logic
+def find_gcd(a, b):
+    while b:
+        # Conditional logic happens inside this while loop
+        a, b = b, a % b
+    return a
+
+# Function to find LCM using the standard formula
+def find_lcm(a, b):
+    if a == 0 or b == 0:
+        return 0
+    # LCM(a, b) = (a * b) // GCD(a, b)
+    return abs(a * b) // find_gcd(a, b)
+
+# Taking input from the user
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+num3 = int(input("Enter third number: "))
+
+# Logic for 3 numbers: GCD(a, b, c) = GCD(a, GCD(b, c))
+gcd_1_2 = find_gcd(num1, num2)
+final_gcd = find_gcd(gcd_1_2, num3)
+
+# Logic for 3 numbers: LCM(a, b, c) = LCM(a, LCM(b, c))
+lcm_1_2 = find_lcm(num1, num2)
+final_lcm = find_lcm(lcm_1_2, num3)
+
+print(f"The GCD of {num1}, {num2}, and {num3} is: {final_gcd}")
+print(f"The LCM of {num1}, {num2}, and {num3} is: {final_lcm}")
