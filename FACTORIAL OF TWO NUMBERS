@@ -1,0 +1,19 @@
+# Function to calculate factorial using conditional logic
+def calculate_factorial(n):
+    # Condition: Factorial is not defined for negative numbers
+    if n < 0:
+        return "Undefined (Negative Number)"
+    # Condition: Factorial of 0 and 1 is always 1
+    elif n == 0 or n == 1:
+        return 1
+    # Condition: Recursive step for positive integers greater than 1
+    else:
+        return n * calculate_factorial(n - 1)
+
+# Input: Define two numbers
+num1 = 5
+num2 = 7
+
+# Display the results
+print(f"The factorial of {num1} is: {calculate_factorial(num1)}")
+print(f"The factorial of {num2} is: {calculate_factorial(num2)}")
