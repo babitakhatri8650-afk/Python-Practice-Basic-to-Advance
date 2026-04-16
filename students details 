@@ -1,0 +1,33 @@
+# Program to collect student details and assign a grade
+name = input("Enter student name: ")
+age = int(input("Enter student age: "))
+marks = float(input("Enter total marks (0-100): "))
+
+# 1. Check age eligibility (Simple IF-ELSE)
+if age >= 18:
+    status = "Adult Student"
+else:
+    status = "Minor Student"
+
+# 2. Assign grade based on marks (ELIF chain)
+if marks >= 90:
+    grade = 'A+'
+elif marks >= 80:
+    grade = 'A'
+elif marks >= 70:
+    grade = 'B'
+elif marks >= 60:
+    grade = 'C'
+elif marks >= 35:
+    grade = 'Pass'
+else:
+    grade = 'Fail'
+
+# 3. Handle specific validation (Nested IF)
+if marks > 100 or marks < 0:
+    print("Error: Invalid marks entered.")
+else:
+    print("\n--- Student Details ---")
+    print(f"Name: {name}")
+    print(f"Age: {age} ({status})")
+    print(f"Grade: {grade}")
