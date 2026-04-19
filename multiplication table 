@@ -1,0 +1,8 @@
+# Prompt user for input and convert it to an integer
+number = int(input("Enter the number for the multiplication table: "))
+
+# Use a for loop to iterate from 1 to 10
+# range(1, 11) starts at 1 and stops before 11
+for i in range(1, 11):
+    result = number * i
+    print(f"{number} x {i} = {result}")
