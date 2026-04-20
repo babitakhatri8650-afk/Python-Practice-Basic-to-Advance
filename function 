@@ -1,0 +1,9 @@
+# Function Definition
+def greet_user(name):
+    """This function prints a greeting."""
+    message = f"Hello, {name}!"
+    return message
+
+# Function Call
+result = greet_user("Alice")
+print(result)  # Output: Hello, Alice!
