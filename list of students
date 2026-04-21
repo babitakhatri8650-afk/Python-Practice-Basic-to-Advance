@@ -1,0 +1,13 @@
+# 1. Ask for the number of students
+n = int(input("Enter the number of students: "))
+
+# 2. Create an empty list
+student_list = []
+
+# 3. Use a loop to collect each name
+for i in range(n):
+    name = input(f"Enter the name of student {i+1}: ")
+    student_list.append(name)
+
+# 4. Print the final list
+print("\nList of Students:", student_list)
