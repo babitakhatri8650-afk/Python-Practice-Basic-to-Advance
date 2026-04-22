@@ -1,0 +1,14 @@
+def sum_even_recursive(numbers):
+    if not numbers:
+        return 0
+    
+    current = numbers[0]
+    # Condition: Only add if the number is even
+    if current % 2 == 0:
+        return current + sum_even_recursive(numbers[1:])
+    else:
+        return sum_even_recursive(numbers[1:])
+
+# Example usage
+mixed_list = [1, 2, 3, 4, 5, 6]
+print(f"Even Sum: {sum_even_recursive(mixed_list)}")  # Output: 12
