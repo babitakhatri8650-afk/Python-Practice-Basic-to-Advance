@@ -1,0 +1,12 @@
+from datetime import datetime, timedelta
+
+time_str = "14:30:00"
+# Convert string to datetime object (using a dummy date of 1900-01-01)
+start_time = datetime.strptime(time_str, "%H:%M:%S")
+
+# Add 45 minutes
+new_time = start_time + timedelta(minutes=45)
+
+# Format back to a string
+print(f"Original: {time_str}")
+print(f"New Time: {new_time.strftime('%H:%M:%S')}")
