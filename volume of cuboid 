@@ -1,0 +1,10 @@
+# Get dimensions from the user as floating-point numbers
+length = float(input("Enter the length of the cuboid: "))
+width = float(input("Enter the width of the cuboid: "))
+height = float(input("Enter the height of the cuboid: "))
+
+# Calculate the volume
+volume = length * width * height
+
+# Print the result formatted to 2 decimal places
+print(f"The volume of the cuboid is: {volume:.2f} cubic units")
