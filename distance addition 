@@ -1,0 +1,21 @@
+# Input Distances
+feet1 = int(input("Enter feet 1: "))
+inches1 = float(input("Enter inches 1: "))
+
+feet2 = int(input("Enter feet 2: "))
+inches2 = float(input("Enter inches 2: "))
+
+# 1. Convert everything to inches
+total_inches_1 = (feet1 * 12) + inches1
+total_inches_2 = (feet2 * 12) + inches2
+
+# 2. Sum the total inches
+total_sum_inches = total_inches_1 + total_inches_2
+
+# 3. Convert back to feet and inches using math
+# Use // for integer division and % for the remainder
+result_feet = int(total_sum_inches // 12)
+result_inches = total_sum_inches % 12
+
+# Output result
+print(f"Total distance: {result_feet} feet, {result_inches:.2f} inches")
