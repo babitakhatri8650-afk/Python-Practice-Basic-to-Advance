@@ -1,9 +1,10 @@
-from functools import reduce
-l=[4,35,48735,234,22,77,8875]
+sentence="Coding in Python is fun"
 
-def greater(a,b):
-    if a>b:
-        return a
-    return b
+new=sentence.replace("fun","awesome")
+print(new)
 
-print(reduce(greater,l))
+print(sentence.find("Python"))
+index=sentence.index("Python")
+print(index)
+
+print(sentence.upper())
