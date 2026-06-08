@@ -1,26 +1,5 @@
-class vector:
-    def __inti__(self,x,y,z):
-        self.x=x
-        self.y=y
-        self.z=z
+name="John"
+age=25
+print(f"My name is {name} and I am {age} years old.")
 
-    def __add__(self,other):
-        result=(self.x+other.x,self.y+other.y,self.z+other.z)
-        return result
-    
-    def __mul__(self,other):
-        result=(self.x*other.x,self.y*other.y,self.z*other.z)
-        return result
-
-
-    def __str__(self):
-        return f"({self.x}i,{self.y}j,{self.z}k)"
-v1=(2,4,5)
-v2=(3,5,6)
-v3=(4,6,7)
-
-print(v1+v2)
-print(v1*v2)
-        
-  
-        
+print("My name is {} and I am {} years old.".format(name,age))
